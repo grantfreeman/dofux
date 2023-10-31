@@ -40,26 +40,29 @@ def color_hsl(slot: int, hue: int, saturation: int, lightness: int):
     mouse.position = slot_pixel(slot)
     mouse.click(Button.left, 1)
     sleep(DELAY)
-    print(mouse.position)
+    print(f'SLOT {slot} :', mouse.position)
 
     # select hue and saturation
     mouse.position = (hue_pixel(hue), sat_pixel(saturation))
     mouse.click(Button.left, 1)
     sleep(DELAY)
-    print(mouse.position)
+    print('HUE & SAT :', mouse.position)
 
     # select lightness
     mouse.position = (LIGHT_X, light_pixel(lightness))
     mouse.click(Button.left, 1)
     sleep(DELAY)
-    print(mouse.position)
+    print('LIGHT :', mouse.position)
+
+    # pad output
+    print()
 
 if __name__ == "__main__":
     mouse = Controller()
     user = mouse.position
     color_hsl(1, 24, 40, 52)
-    color_hsl(2, 180, 16, 20)
-    color_hsl(3, 40, 80, 56)
-    color_hsl(4, 110, 24, 32)
-    color_hsl(5, 180, 16, 20)
+    color_hsl(2, 180, 30, 10)
+    color_hsl(3, 170, 36, 24)
+    color_hsl(4, 40, 80, 50)
+    color_hsl(5, 10, 32, 28)
     mouse.position = user
