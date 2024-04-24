@@ -59,10 +59,16 @@ def color_hsl(slot: int, hue: int, saturation: int, lightness: int):
 
 if __name__ == "__main__":
     mouse = Controller()
+
+    # save for later
     user = mouse.position
-    color_hsl(1, 26, 42, 40)
+
+    # enutrof
+    color_hsl(1, 30, 56, 50)
     color_hsl(2, 40, 50, 70)
-    color_hsl(3, 40, 80, 50)
-    color_hsl(4, 150, 24, 24)
+    color_hsl(3, 140, 32, 24)
+    color_hsl(4, 38, 80, 50)
     color_hsl(5, 10, 32, 28)
+
+    # revert to original mouse position
     mouse.position = user
