@@ -4,33 +4,33 @@ from typing import Tuple
 from time import sleep
 
 DELAY = 0.100
-LIGHT_X = 924
+LIGHT_X = 929
 
 def slot_pixel(slot: int) -> Tuple:
-    SLOT_X = [600, 655, 710, 765, 820]
-    SLOT_Y = 650
+    SLOT_X = [620, 675, 730, 785, 840]
+    SLOT_Y = 655
     return (SLOT_X[slot - 1], SLOT_Y)
 
 def hue_pixel(value: int) -> int:
     # convert from 0-360 to 0-386
-    HUE_MIN_X = 517
-    HUE_MAX_X = 902
+    HUE_MIN_X = 523
+    HUE_MAX_X = 908
     HUE_RANGE = HUE_MAX_X - HUE_MIN_X
     base = (value * HUE_RANGE) / 360
     return base + HUE_MIN_X
 
 def sat_pixel(value: int) -> int:
     # convert from 0-100% to 0-149
-    SAT_MIN_Y = 674
-    SAT_MAX_Y = 823
+    SAT_MIN_Y = 679
+    SAT_MAX_Y = 828
     SAT_RANGE = SAT_MAX_Y - SAT_MIN_Y
-    base = (value * SAT_RANGE) / 100
+    base = (value / 100) * SAT_RANGE
     return SAT_MAX_Y - base
 
 def light_pixel(value: int) -> int:
     # convert from 0-100% to 0-149
-    LIGHT_MIN_Y = 674
-    LIGHT_MAX_Y = 823
+    LIGHT_MIN_Y = 679
+    LIGHT_MAX_Y = 828
     LIGHT_RANGE = LIGHT_MAX_Y - LIGHT_MIN_Y
     base = (value * LIGHT_RANGE) / 100
     return LIGHT_MAX_Y - base
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     user = mouse.position
 
     # enutrof
-    color_hsl(1, 30, 56, 50)
+    color_hsl(1, 30, 52, 50)
     color_hsl(2, 40, 50, 70)
     color_hsl(3, 140, 32, 24)
     color_hsl(4, 38, 80, 50)
