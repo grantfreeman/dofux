@@ -64,7 +64,7 @@ if __name__ == "__main__":
     user = mouse.position
 
     # enutrof
-    color_hsl(1, 30, 52, 50)
+    color_hsl(1, 24, 52, 50)
     color_hsl(2, 40, 50, 70)
     color_hsl(3, 140, 32, 24)
     color_hsl(4, 38, 80, 50)
