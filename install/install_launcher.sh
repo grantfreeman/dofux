@@ -8,9 +8,9 @@ launcher_app=Ankama\ Launcher-Setup-x86_64.AppImage
 
 # move over relevant files
 mkdir -p $ankama_dir
-cp $script_dir/../install_files/ankama_logo.png $ankama_dir
-cp $script_dir/../install_files/ankama.desktop $ankama_dir
-cp $script_dir/../install_files/remove_cinematics.sh $ankama_dir
+cp $script_dir/ankama_logo.png $ankama_dir
+cp $script_dir/ankama.desktop $ankama_dir
+cp $script_dir/remove_cinematics.sh $ankama_dir
 
 # update home folder username
 sed -i "s|<USER>|${user}|g" $ankama_dir/ankama.desktop
