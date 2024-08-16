@@ -19,4 +19,4 @@ xdotool windowmove $dofus_window_id 759 180
 
 # dofus 2 pixel-perfect
 # xdotool windowsize $dofus_window_id 2122 1098
-# xdotool windowmove $dofus_window_id 658 173
+# xdotool windowmove $dofus_window_id 658 173 
