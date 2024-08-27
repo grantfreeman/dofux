@@ -14,12 +14,12 @@ xdotool getwindowgeometry $dofus_window_id
 
 # standard 1080p
 # width 0 - 1518 :: height 25 - 335
-xdotool windowsize $dofus_window_id 1920 1080
-xdotool windowmove $dofus_window_id 759 180
+# xdotool windowsize $dofus_window_id 1920 1080
+# xdotool windowmove $dofus_window_id 759 180
 
 # dofus 2 pixel-perfect
-# xdotool windowsize $dofus_window_id 2122 1098
-# xdotool windowmove $dofus_window_id 658 173
+xdotool windowsize $dofus_window_id 2122 1098
+xdotool windowmove $dofus_window_id 658 173
 
 # xfce max 16:9
 # xdotool windowsize $dofus_window_id 2475 1392
