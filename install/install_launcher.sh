@@ -20,4 +20,5 @@ wget -P $ankama_dir $launcher_url
 chmod 755 "$ankama_dir/$launcher_app"
 
 # create freedesktop link
+mkdir -p ~/.local/share/applications
 ln $ankama_dir/ankama.desktop ~/.local/share/applications/ankama.desktop
